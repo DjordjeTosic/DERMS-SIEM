@@ -1,0 +1,21 @@
+[TimeStamp] [ApplicationName/IP] << CE >> [Info] -> UI requested to start communication with CE.
+[TimeStamp] [ApplicationName/IP] << CE >> [Info] -> UI established communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.
+[TimeStamp] [DifferentApplicationName/DifferentIP] << CE >> [Info] ->  UI requested to start communication with CE.

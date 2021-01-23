@@ -1,0 +1,96 @@
+[TimeStamp] << NMS >> [Info] -> NMS started.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine started.
+[TimeStamp] << SCADA >> [Info] -> SCADA started.
+[TimeStamp] << TransactionCordinator >> [Info] -> TransactionCordinator started.
+[TimeStamp] << UI >> [Info] -> UI started.
+[TimeStamp] << NMS >> [Info] -> NMS sent model on CalculationEngine.
+[TimeStamp] << NMS >> [Info] -> NMS sent model on SCADA.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine recived WeatherForecast.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine started calculating Production.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine started calculating Consumption.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine created TreeGraph.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine colored graph.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine sent data on UI.
+[TimeStamp] << SCADA >> [Info] -> SCADA connected with Simulator.
+[TimeStamp] << UI >> [Info] -> user turned breaker off.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine calculating changes in grid.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine turning off Generator.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine sent changes to SCADA.
+[TimeStamp] << SCADA >> [Info] -> SCADA turned off Generator.
+[TimeStamp] << SCADA >> [Info] -> SCADA started new aquisiton.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine recived aquisition from SCADA.
+[TimeStamp] << CalculationEngine >> [Info] -> CalculationEngine sent updated data to UI.
+[TimeStamp] << UI >> [Info] -> UI refresh views with updated data.1/10/2021 9:51:09 PM << UI >> [Info] -> UI is started.
+1/10/2021 10:06:47 PM << UI >> [Info] -> UI is started.
+1/10/2021 10:08:45 PM << UI >> [Info] -> UI is started.
+1/10/2021 10:10:55 PM << UI >> [Info] -> UI is started.
+1/11/2021 4:55:47 PM << UI >> [Info] -> UI is started.
+1/11/2021 6:48:05 PM << UI >> [Info] -> UI is started.
+1/11/2021 7:41:05 PM << UI >> [Info] -> UI is started.
+1/11/2021 7:44:24 PM << UI >> [Info] -> UI is started.
+1/11/2021 7:48:13 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:05:38 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:19:59 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:20:39 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:22:11 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:24:15 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:31:28 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:35:03 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:37:17 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:56:44 PM << UI >> [Info] -> UI is started.
+1/11/2021 8:59:21 PM << UI >> [Info] -> UI is started.
+1/11/2021 9:14:48 PM << UI >> [Info] -> UI is started.
+1/12/2021 9:10:53 PM << UI >> [Info] -> UI is started.
+1/12/2021 9:17:15 PM << UI >> [Info] -> UI is started.
+1/13/2021 1:30:09 PM << UI >> [Info] -> UI is started.
+1/13/2021 1:33:48 PM << UI >> [Info] -> UI is started.
+1/13/2021 3:23:02 PM << UI >> [Info] -> UI is started.
+1/13/2021 3:27:09 PM << UI >> [Info] -> UI is started.
+1/13/2021 3:46:24 PM << UI >> [Info] -> UI is started.
+1/13/2021 3:50:12 PM << UI >> [Info] -> UI is started.
+1/13/2021 4:07:05 PM << UI >> [Info] -> UI is started.
+1/13/2021 4:11:43 PM << UI >> [Info] -> UI is started.
+1/13/2021 5:40:56 PM << UI >> [Info] -> UI is started.
+1/13/2021 5:41:12 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:06:42 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:15:08 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:17:31 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:18:53 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:22:42 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:28:51 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:33:10 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:35:54 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:38:18 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:40:15 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:44:48 PM << UI >> [Info] -> UI is started.
+1/14/2021 1:45:09 PM << UI >> [Info] -> UI is started.
+1/16/2021 3:58:59 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:00:44 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:01:59 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:03:52 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:04:52 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:06:49 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:08:21 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:10:55 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:13:27 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:16:52 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:19:28 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:22:09 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:22:53 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:26:08 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:27:35 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:30:09 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:40:16 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:41:52 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:46:03 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:48:56 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:52:01 PM << UI >> [Info] -> UI is started.
+1/16/2021 4:58:02 PM << UI >> [Info] -> UI is started.
+1/16/2021 5:06:51 PM << UI >> [Info] -> UI is started.
+1/16/2021 5:08:36 PM << UI >> [Info] -> UI is started.
+1/16/2021 5:13:07 PM << UI >> [Info] -> UI is started.
+1/16/2021 7:20:06 PM << UI >> [Info] -> UI is started.
+1/16/2021 7:21:38 PM << UI >> [Info] -> UI is started.
+1/16/2021 7:38:55 PM << UI >> [Info] -> UI is started.
+1/16/2021 7:40:44 PM << UI >> [Info] -> UI is started.
+1/16/2021 7:51:57 PM << UI >> [Info] -> UI is started.

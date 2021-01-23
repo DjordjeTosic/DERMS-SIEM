@@ -1,0 +1,38 @@
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEM.exe.config
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEM.exe
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEM.pdb
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEMServices.dll
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEMCommon.dll
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEMServices.pdb
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\bin\Debug\SIEMCommon.pdb
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\obj\Debug\SIEM.csprojAssemblyReference.cache
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\obj\Debug\SIEM.csproj.CoreCompileInputs.cache
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\obj\Debug\SIEM.csproj.CopyComplete
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\obj\Debug\SIEM.exe
+C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SIEM\obj\Debug\SIEM.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEM.exe.config
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEM.exe
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEM.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEMServices.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEMCommon.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEMServices.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEMCommon.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csprojAssemblyReference.cache
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csproj.CoreCompileInputs.cache
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csproj.CopyComplete
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.exe
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\DERMSCommon.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\DarkSkyApi.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\Polenter.SharpSerializer.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\FTN.Common.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\Innovative.SolarCalculator.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\Innovative.Geometry.Angle.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignColors.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\DERMSCommon.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\Polenter.SharpSerializer.xml
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\FTN.Common.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignColors.pdb

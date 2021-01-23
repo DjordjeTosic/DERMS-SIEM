@@ -1,0 +1,14 @@
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Simulation value writed on adress 6001 Value 300.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Aquisition value writed on adress 6002 Value 300.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Command value writed on adress 6003 Value 0.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Simulation value writed on adress 7001 Value 208.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Aquisition value writed on adress 7002 Value 208.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Command value writed on adress 7003 Value 0.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Simulation value writed on adress 8001 Value 36.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Aquisition value writed on adress 8002 Value 36.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Command value writed on adress 8003 Value 0.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Aquisition value writed on adress 6002 Value 320.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Command value writed on adress 6003 Value 20.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Warning] -> Simulation value writed on adress 9001 Value 489.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Warning] -> Aquisition value writed on adress 9002 Value 489.
+[TimeStamp] [ApplicationName/IP] << SCADA >> [Info] -> Command value writed on adress 8003 Value 0.
