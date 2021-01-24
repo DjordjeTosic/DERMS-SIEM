@@ -10,14 +10,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 using UI.Communication;
+using UI.Model;
+using UI.Resources;
 using static DERMSCommon.Enums;
 
 namespace UI.ViewModel
 {
     public class SIEMUserControlViewModel: BindableBase
     {
+        #region Variables
         CommunicationWithSIEM proxy;
         private string siemString;
         private string cpuUsage;
@@ -33,7 +38,9 @@ namespace UI.ViewModel
         private DateTime currentTime;
         private TimeSpan elapsedTime = new TimeSpan();
         private int brojac = 0;
+        private string alertText;
 
+        private SolidColorBrush alertColor;
         private SolidColorBrush color1;
         private SolidColorBrush color2;
         private Visibility visibilityCPU;
@@ -43,6 +50,11 @@ namespace UI.ViewModel
         private bool showCPU;
         private bool showRAM;
         private ObservableCollection<SIEMData> siemData;
+        private double _minHeightFilter;
+        private Visibility _filterVisibility;
+        private RelayCommand<object> _filterOnOff;
+        private RelayCommand<object> _applyFilterCommand;
+        #endregion
         public SIEMUserControlViewModel()
         {
             proxy = new CommunicationWithSIEM();
@@ -56,8 +68,56 @@ namespace UI.ViewModel
             Color2 = new SolidColorBrush(Colors.Blue);
             ChartValues1 = new ChartValues<double>();
             ChartValues2 = new ChartValues<double>();
+            AlertText = "Services are Healthy";
+            AlertColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ff008000"));
             InitializeAndStartThreads();
         }
+        #region Properties
+        public SignalsSummaryFilter SignalsSummaryFilter
+        {
+            get;
+            set;
+        }
+        public ICommand ApplyFiltersCommand
+        {
+            get
+            {
+                if (_applyFilterCommand == null)
+                {
+                    _applyFilterCommand = new RelayCommand<object>(ApplyFilter);
+                }
+
+                return _applyFilterCommand;
+            }
+        }
+        public ICommand FilterOnOffCommand
+        {
+            get
+            {
+                if (_filterOnOff == null)
+                {
+                    _filterOnOff = new RelayCommand<object>(FilterOnOff);
+                }
+
+                return _filterOnOff;
+            }
+        }
+        public Visibility FilterVisibility
+        {
+            get { return _filterVisibility; }
+            set { _filterVisibility = value; OnPropertyChanged("FilterVisibility"); }
+        }
+        public List<string> FilterType
+        {
+            get;
+            set;
+        }
+        public List<string> FilterAlarm
+        {
+            get;
+            set;
+        }
+        public double MinHeightFilter { get { return _minHeightFilter; } set { _minHeightFilter = value; OnPropertyChanged("MinHeightFilter"); } }
         public SolidColorBrush Color1 { get { return color1; } set { color1 = value; OnPropertyChanged("Color1"); } }
         public SolidColorBrush Color2 { get { return color2; } set { color2 = value; OnPropertyChanged("Color2"); } }
         public ObservableCollection<SIEMData> SiemData { get { return siemData; } set { siemData = value; OnPropertyChanged("SiemData"); } }
@@ -100,6 +160,30 @@ namespace UI.ViewModel
                 OnPropertyChanged("ShowCPU");
             }
         }
+        public string AlertText
+        {
+            get
+            {
+                return alertText;
+            }
+            set
+            {
+                alertText = value;
+                OnPropertyChanged("AlertText");
+            }
+        }
+        public SolidColorBrush AlertColor
+        {
+            get
+            {
+                return alertColor;
+            }
+            set
+            {
+                alertColor = value;
+                OnPropertyChanged("AlertColor");
+            }
+        }
         public bool ShowRAM
         {
             get
@@ -124,6 +208,7 @@ namespace UI.ViewModel
         public Visibility VisibilityRAM { get { return visibilityRAM; } set { visibilityRAM = value; OnPropertyChanged("VisibilityRAM"); } }
         public string SiemString { get => siemString; set { siemString = value; OnPropertyChanged("SiemString"); } }
         public string CpuUsage { get => cpuUsage; set { cpuUsage = value; OnPropertyChanged("CpuUsage"); } }
+        #endregion
         private void InitializeAndStartThreads()
         {
             InitializeTimerThread();
@@ -191,7 +276,7 @@ namespace UI.ViewModel
                 if (disposedChart)
                     return;
 
-                var mapper = new LiveCharts.Configurations.CartesianMapper<double>().X((values, index) => index).Y((values) => values).Fill((v, i) => i == DateTime.Now.Hour ? Brushes.Green : Brushes.White).Stroke((v, i) => i == DateTime.Now.Hour ? Brushes.Green : Brushes.White);
+                var mapper = new LiveCharts.Configurations.CartesianMapper<double>().X((values, index) => index).Y((values) => values);
 
                 LiveCharts.Charting.For<double>(mapper, LiveCharts.SeriesOrientation.Horizontal);
 
@@ -218,31 +303,57 @@ namespace UI.ViewModel
                     tempSiem2.Add(s);
                 }
                 SiemData = new ObservableCollection<SIEMData>(tempSiem2);
-                //foreach (SIEMData siem in SiemData)
-                //{
-                //    siem.AlarmImage = new MaterialDesignThemes.Wpf.PackIconKind();
-                //    siem.AlarmImageColor = new SolidColorBrush();
-                //    switch (siem.SecurityInfo)
-                //    {
-                //        case 0:
-                //            siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.Safe;
-                //            siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ff33cc"));
-                //            break;
-                //        case 1:
-                //            siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.ServerSecurity;
-                //            siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cc0000"));
-                //            break;
-                //        case 2:
-                //            siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.SecurityAccount;
-                //            siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cc0000"));
-                //            break;
+                foreach (SIEMData siem in SiemData)
+                {
+                   
+                    siem.AlarmImage = new MaterialDesignThemes.Wpf.PackIconKind();
+                    siem.AlarmImageColor = new SolidColorBrush();
+                    //Dispatcher.CurrentDispatcher.Invoke(() => siem.AlarmImageColor);
+                    switch (siem.SecurityInfo)
+                    {
+                        case 0:
+                            siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.Shield;
+                            siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ff008000"));
+                            siem.AlarmImageColor.Freeze();
+                            break;
+                        case 1:
+                            siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.Shield;
+                            siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffffa500"));
+                            siem.AlarmImageColor.Freeze();
+                            AlertText = "CalculationEngine is under DDoS attack!";
+                            AlertColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffffa500"));
+                            AlertColor.Freeze();
+                            break;
+                        case 2:
+                            siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.SecurityAccount;
+                            //siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cc0000"));
+                            break;
 
-                //    }
-                //}
+                    }
+
+                    
+                }
 
                 //CurrentTime = DateTime.Now.ToString("HH:mm:ss");
                 Thread.Sleep(2000);
             }
+        }
+        private void FilterOnOff(object obj)
+        {
+            if (FilterVisibility == Visibility.Collapsed)
+            {
+                FilterVisibility = Visibility.Visible;
+                MinHeightFilter = 100;
+            }
+            else
+            {
+                FilterVisibility = Visibility.Collapsed;
+                MinHeightFilter = 20;
+            }
+        }
+        private void ApplyFilter(object obj)
+        {
+            
         }
     }
 }

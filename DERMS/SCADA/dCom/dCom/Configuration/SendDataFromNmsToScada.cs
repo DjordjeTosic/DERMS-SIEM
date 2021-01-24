@@ -2,6 +2,7 @@
 using Common;
 using dCom.Simulation;
 using dCom.ViewModel;
+using DERMSCommon;
 using DERMSCommon.DataModel.Core;
 using DERMSCommon.DataModel.Meas;
 using DERMSCommon.NMSCommuication;
@@ -14,6 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using System.ServiceModel;
 using System.Text;
 using System.Threading;
@@ -177,7 +180,18 @@ namespace dCom.Configuration
             else
                 return false;
         }
-
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
 
         /// <summary>
         /// Method for handling received points.
@@ -212,6 +226,13 @@ namespace dCom.Configuration
             factoryUI = new ChannelFactory<ISendDataToCEThroughScada>(binding, new EndpointAddress("net.tcp://localhost:19999/ISendDataToCEThroughScada"));
             ProxyUI = factoryUI.CreateChannel();
             Console.WriteLine("Connected: net.tcp://localhost:19999/ISendDataToCEThroughScada");
+            string client = string.Empty;
+            client = GetLocalIPAddress();
+            client += ":19999";
+
+           
+            Logger.LogCalculateEngineConnections(client, "SCADA send request for establishing communication with CE", Enums.LogLevel.Info);
+            Logger.LogCalculateEngineConnections(client, "SCADA establieshed communication with CE", Enums.LogLevel.Info);
 
 
             ProxyUI.ReceiveFromScada(datapoints);

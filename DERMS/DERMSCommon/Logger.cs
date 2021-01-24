@@ -20,7 +20,7 @@ namespace DERMSCommon
             path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\DERMS_Log.txt");
             path2 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\GeneratorValues.txt");
             path3 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\SimulatorValues.txt");
-            path4 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\CalculationEngine.txt");
+            path4 = Path.Combine(@"C: \Users\Djole\Desktop\DERMS-SIEM\DERMS\Loggs\CalculationEngine.txt");
         }
 
         public static void Log(string message,Enums.Component component, Enums.LogLevel logLevel)

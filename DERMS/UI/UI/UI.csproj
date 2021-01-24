@@ -96,6 +96,7 @@
     <Compile Include="Model\ComboData.cs" />
     <Compile Include="Model\LoggesSummaryFilter.cs" />
     <Compile Include="Model\NetworkModelViewClass.cs" />
+    <Compile Include="Model\SIEMFilter.cs" />
     <Compile Include="Model\SignalsSummaryFilter.cs" />
     <Compile Include="Resources\MediatorPattern\EventArgs.cs" />
     <Compile Include="Resources\MediatorPattern\EventRaiser.cs" />

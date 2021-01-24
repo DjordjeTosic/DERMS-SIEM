@@ -1007,7 +1007,6 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\bin\Debug\
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\bin\Debug\MaterialDesignColors.pdb
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\obj\Debug\TransactionCoordinatorService.csprojAssemblyReference.cache
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\obj\Debug\TransactionCoordinatorService.csproj.CoreCompileInputs.cache
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\obj\Debug\TransactionCoordinatorService.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinatorService\obj\Debug\TransactionCoordinatorService.dll

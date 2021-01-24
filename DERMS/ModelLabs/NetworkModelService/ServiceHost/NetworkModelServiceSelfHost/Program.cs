@@ -19,7 +19,7 @@ namespace FTN.Services.NetworkModelService
 				string message = "Starting Network Model Serivice...";
 				CommonTrace.WriteTrace(CommonTrace.TraceInfo, message);
 				Console.WriteLine("\n{0}\n", message);
-                Logger.Log(message, Enums.Component.NMS, Enums.LogLevel.Info);
+                //Logger.Log(message, Enums.Component.NMS, Enums.LogLevel.Info);
 
                 using (NetworkModelService nms = new NetworkModelService())
 				{					

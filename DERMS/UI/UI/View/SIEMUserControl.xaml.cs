@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UI.ViewModel;
 
 namespace UI.View
 {
@@ -24,10 +25,11 @@ namespace UI.View
         public SIEMUserControl()
         {
             InitializeComponent();
-            var yAxis = new Axis { Separator = new LiveCharts.Wpf.Separator { StrokeThickness = 0.12 } };
-            var sAxis = new Axis { Separator = new LiveCharts.Wpf.Separator { StrokeThickness = 0.1, Step = 1 } };
-            cartesianChart.AxisY.Add(yAxis);
-            cartesianChart.AxisX.Add(sAxis);
+            //var yAxis = new Axis { Separator = new LiveCharts.Wpf.Separator { StrokeThickness = 0.12 } };
+            //var sAxis = new Axis { Separator = new LiveCharts.Wpf.Separator { StrokeThickness = 0.1, Step = 1 } };
+            //cartesianChart.AxisY.Add(yAxis);
+            //cartesianChart.AxisX.Add(sAxis);
+            DataContext = new SIEMUserControlViewModel();
         }
     }
 }

@@ -491,3 +491,11 @@ C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DER
 C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
 C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\bin\Debug\Common.pdb
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\bin\Debug\EasyModbus.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CopyComplete
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb

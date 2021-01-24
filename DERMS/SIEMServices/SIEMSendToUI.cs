@@ -33,7 +33,7 @@ namespace SIEMServices
                             {
                                 string[] parts = line.Split(new[] { "  " }, StringSplitOptions.None);
                                 DateTime dateTime = DateTime.Parse(parts[0]);
-                                if (parts[1].Equals("Unknown")) 
+                                if (parts[1].Equals(" Unknown")) 
                                     LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3],1));
                                 else
                                     LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 0));
