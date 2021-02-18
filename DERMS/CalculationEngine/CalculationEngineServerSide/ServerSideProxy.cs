@@ -110,7 +110,7 @@ namespace CalculationEngineService
                     while(uslov != 45)
                     {
                         uslov++;
-                        Logger.LogCalculateEngineConnections("Unknown", "Client send request for establishing communication with CE", Enums.LogLevel.Warning);
+                        //Logger.LogCalculateEngineConnections("Unknown", "Client send request for establishing communication with CE", Enums.LogLevel.Warning);
                     }
                 }
                 Thread.Sleep(1000);

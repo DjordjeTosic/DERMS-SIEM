@@ -3891,26 +3891,6 @@ C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DER
 C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\UI\UI\obj\Debug\View\SIEMUserControl.baml
 C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\UI\UI\bin\Debug\SIEMCommon.dll
 C:\Users\Djole\Desktop\DERMS-8e3340745e094debe5c01d71e9c32838e0efe80d - Copy\DERMS\UI\UI\bin\Debug\SIEMCommon.pdb
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.csprojAssemblyReference.cache
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\Resources\AppDictionary.baml
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\GISUserControl.baml
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\App.baml
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\BreakerControlThroughGISWindow.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\DERDashboardUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\EventSummaryUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\GISUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\HistoryUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\LoadingWindow.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\MainWindow.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ManualCommandingWindow.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NetworkModelUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\PopUpWindow.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SIEMUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SignalsSummaryUserControl.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\App.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI_MarkupCompile.cache
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI_MarkupCompile.lref
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\RtuCfg.txt
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\UI.exe.config
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\UI.exe
@@ -3957,6 +3937,26 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\Common.pdb
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\Innovative.SolarCalculator.xml
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\ProcessingModule.pdb
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\bin\Debug\Innovative.Geometry.Angle.xml
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\Resources\AppDictionary.baml
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\GISUserControl.baml
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\App.baml
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\BreakerControlThroughGISWindow.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\DERDashboardUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\EventSummaryUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\GISUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\HistoryUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\LoadingWindow.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\MainWindow.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ManualCommandingWindow.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NetworkModelUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\PopUpWindow.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SIEMUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SignalsSummaryUserControl.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\App.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI_MarkupCompile.cache
+C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI_MarkupCompile.lref
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\BreakerControlThroughGISWindow.baml
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\DERDashboardUserControl.baml
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\EventSummaryUserControl.baml

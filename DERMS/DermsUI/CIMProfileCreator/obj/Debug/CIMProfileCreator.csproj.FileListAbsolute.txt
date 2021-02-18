@@ -188,8 +188,3 @@ C:\Users\Nemanja\Desktop\Git1507\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug
 C:\Users\Nemanja\Desktop\Git1507\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csproj.CoreCompileInputs.cache
 C:\Users\Nemanja\Desktop\Git1507\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
 C:\Users\Nemanja\Desktop\Git1507\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.dll
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.pdb
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csproj.CoreCompileInputs.cache
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb

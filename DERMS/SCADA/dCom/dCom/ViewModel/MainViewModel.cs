@@ -444,11 +444,11 @@ namespace dCom.ViewModel
                 CurrentTime = DateTime.Now;
                 ElapsedTime = ElapsedTime.Add(new TimeSpan(0, 0, 1));
                 acquisitionTrigger.Set();
-                if (brojac % 15 == 0 && nes < 2)
+                if (brojac % 20 == 0 )
                 {
                    ret =  ws.GetWeatherForecastAsyncSimulate().Result;
-                    if(ret)
-                        nes++;
+                    //if (ret)
+                    //    nes++;
                 }
                 Thread.Sleep(1000);
             }

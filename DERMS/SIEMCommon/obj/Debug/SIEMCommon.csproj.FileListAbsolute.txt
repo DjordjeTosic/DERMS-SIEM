@@ -20,7 +20,6 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\bin\Debug\FTN.Common.pdb
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\bin\Debug\MaterialDesignColors.pdb
-C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\obj\Debug\SIEMCommon.csprojAssemblyReference.cache
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\obj\Debug\SIEMCommon.csproj.CoreCompileInputs.cache
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\obj\Debug\SIEMCommon.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEMCommon\obj\Debug\SIEMCommon.dll

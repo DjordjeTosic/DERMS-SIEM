@@ -15,8 +15,7 @@ namespace CalculationEngine
     {
         static void Main(string[] args)
         {
-            //DarkSkyApi darkSkyApi = new DarkSkyApi();
-            //darkSkyApi.GetWeatherForecastAsync(45.25167, 19.83694);
+            
 
             PubSubCalculatioEngine pubSubCalculatioEngine = new PubSubCalculatioEngine();
 
@@ -27,10 +26,7 @@ namespace CalculationEngine
             n.Connect();
 
             n.ProxyTM.Enlist("net.tcp://localhost:19516/ITransactionCheck");
-            /*CalculationEngineCache.Instance.AddDerForecast(new DerForecastDayAhead(), 1, false);
-            CalculationEngineCache.Instance.AddDerForecast(new DerForecastDayAhead(), 2, false);
-            CalculationEngineCache.Instance.AddDerForecast(new DerForecastDayAhead(), 3, false);
-            CalculationEngineCache.Instance.AddDerForecast(new DerForecastDayAhead(), 4, false);*/
+           
                        
             Console.WriteLine("Press enter to send data.");
             Console.ReadLine();

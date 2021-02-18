@@ -37,7 +37,7 @@ namespace dCom.Configuration
         private object lockObject = new object();
         private Thread timerWorker;
         private ConnectionState connectionState;
-
+        private WheaterSimulator ws = new WheaterSimulator();
         private Modbus.Acquisition.Acquisitor acquisitor;
         private AutoResetEvent acquisitionTrigger = new AutoResetEvent(false);
         private TimeSpan elapsedTime = new TimeSpan();
@@ -49,7 +49,7 @@ namespace dCom.Configuration
         private bool timerThreadStopSignal = true;
         private bool disposed = false;
 
-        //private DERMSCommon.SCADACommon.ScadaDB scadaDB = new DERMSCommon.SCADACommon.ScadaDB();
+        private DERMSCommon.SCADACommon.ScadaDB scadaDB = new DERMSCommon.SCADACommon.ScadaDB();
 
         public ConnectionState ConnectionState
         {
@@ -92,11 +92,13 @@ namespace dCom.Configuration
         }
         public bool CheckForTM(SignalsTransfer signals)
         {
+            
             SignalsTransfer = signals;
             if (signals != null)
                 return true;
             else
                 return false;
+
         }
         public bool SendGids(SignalsTransfer signals)
         {
@@ -106,14 +108,25 @@ namespace dCom.Configuration
             if (SignalsTransfer.Insert.Count > 0 || SignalsTransfer.Update.Count > 0)
             {
 
-                analogni = SignalsTransfer.Insert[1];
-                digitalni = SignalsTransfer.Insert[0];
+                if (SignalsTransfer.Insert.Count == 1)
+                {
+                    analogni = SignalsTransfer.Insert[0];
+                }
+                else
+                {
+                    analogni = SignalsTransfer.Insert[1];
+                    digitalni = SignalsTransfer.Insert[0];
+                }
                 foreach (KeyValuePair<long, IdentifiedObject> kvp in analogni)
                 {
                     if (!analogniStari.ContainsKey(kvp.Key))
                     {
                         analogniStari.Add(kvp.Key, kvp.Value);
 
+                    }
+                    else
+                    {
+                        analogniStari[kvp.Key] = kvp.Value;
                     }
                 }
                 foreach (KeyValuePair<long, IdentifiedObject> kvp in digitalni)
@@ -122,6 +135,10 @@ namespace dCom.Configuration
                     {
                         digitalniStari.Add(kvp.Key, kvp.Value);
 
+                    }
+                    else
+                    {
+                        digitalniStari[kvp.Key] = kvp.Value;
                     }
                 }
 
@@ -237,19 +254,19 @@ namespace dCom.Configuration
 
             ProxyUI.ReceiveFromScada(datapoints);
 
-            //Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.CollectItem> collectItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.CollectItem>();
-            //Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.DayItem> dayItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.DayItem>();
-            //Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.MonthItem> monthItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.MonthItem>();
-            //Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.YearItem> yearItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.YearItem>();
+            Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.CollectItem> collectItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.CollectItem>();
+            Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.DayItem> dayItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.DayItem>();
+            Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.MonthItem> monthItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.MonthItem>();
+            Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.YearItem> yearItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.YearItem>();
 
 
-            //collectItems = scadaDB.ConvertDataPoints(datapoints);
+            collectItems = scadaDB.ConvertDataPoints(datapoints);
 
-            //string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SCADA;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            //string queryStmt1 = "INSERT INTO dbo.Collect(Timestamp, Gid, Production) VALUES(@Timestamp, @Gid, @Production)";
-            //scadaDB.InsertInCollectTable(collectItems, queryStmt1, connectionString);
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SCADA;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string queryStmt1 = "INSERT INTO dbo.Collect(Timestamp, Gid, Production) VALUES(@Timestamp, @Gid, @Production)";
+            scadaDB.InsertInCollectTable(collectItems, queryStmt1, connectionString);
 
-            //Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
 
             //using (StreamReader reader = new StreamReader("C:/Users/Nemanja/Desktop/collectData.txt"))
             //{
@@ -259,44 +276,44 @@ namespace dCom.Configuration
             //    }
             //}
 
-            //using (System.Data.SqlClient.SqlConnection _con = new System.Data.SqlClient.SqlConnection(connectionString))
-            //{
-            //    foreach (var d in keyValuePairs)
-            //    {
-            //        using (System.Data.SqlClient.SqlCommand _cmd = new System.Data.SqlClient.SqlCommand(queryStmt1, _con))
-            //        {
+            using (System.Data.SqlClient.SqlConnection _con = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                foreach (var d in keyValuePairs)
+                {
+                    using (System.Data.SqlClient.SqlCommand _cmd = new System.Data.SqlClient.SqlCommand(queryStmt1, _con))
+                    {
 
-            //            System.Data.SqlClient.SqlParameter param1 = _cmd.Parameters.Add("@Gid", System.Data.SqlDbType.BigInt);
-            //            System.Data.SqlClient.SqlParameter param6 = _cmd.Parameters.Add("@Timestamp", System.Data.SqlDbType.DateTime);
-            //            System.Data.SqlClient.SqlParameter param7 = _cmd.Parameters.Add("@P", System.Data.SqlDbType.Float);
+                        System.Data.SqlClient.SqlParameter param1 = _cmd.Parameters.Add("@Gid", System.Data.SqlDbType.BigInt);
+                        System.Data.SqlClient.SqlParameter param6 = _cmd.Parameters.Add("@Timestamp", System.Data.SqlDbType.DateTime);
+                        System.Data.SqlClient.SqlParameter param7 = _cmd.Parameters.Add("@P", System.Data.SqlDbType.Float);
 
-            //            param1.Value = d.Value.Split('|')[0];
-            //            param6.Value = d.Value.Split('|')[1];
-            //            param7.Value = d.Value.Split('|')[2];
-            //            _con.Open();
-            //            try
-            //            {
-            //                _cmd.ExecuteNonQuery();
-            //            }
-            //            catch (Exception e)
-            //            { }
+                        param1.Value = d.Value.Split('|')[0];
+                        param6.Value = d.Value.Split('|')[1];
+                        param7.Value = d.Value.Split('|')[2];
+                        _con.Open();
+                        try
+                        {
+                            _cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        { }
 
-            //            _con.Close();
-            //        }
-            //    }
-            //}
+                        _con.Close();
+                    }
+                }
+            }
 
-            //dayItems = scadaDB.ReadFromCollectTable(connectionString);
-            //string queryStmt2 = "INSERT INTO dbo.Day(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
-            //scadaDB.InsertInDayTable(dayItems, queryStmt2, connectionString);
+            dayItems = scadaDB.ReadFromCollectTable(connectionString);
+            string queryStmt2 = "INSERT INTO dbo.Day(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
+            scadaDB.InsertInDayTable(dayItems, queryStmt2, connectionString);
 
-            //string queryStmt3 = "INSERT INTO dbo.Month(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
-            //monthItems = scadaDB.ReadFromDayTable(connectionString);
-            //scadaDB.InsertInMonthTable(monthItems, queryStmt3, connectionString);
+            string queryStmt3 = "INSERT INTO dbo.Month(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
+            monthItems = scadaDB.ReadFromDayTable(connectionString);
+            scadaDB.InsertInMonthTable(monthItems, queryStmt3, connectionString);
 
-            //string queryStmt4 = "INSERT INTO dbo.Year(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
-            //yearItems = scadaDB.ReadFromMonthTable(connectionString);
-            //scadaDB.InsertInYearTable(yearItems, queryStmt4, connectionString);
+            string queryStmt4 = "INSERT INTO dbo.Year(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
+            yearItems = scadaDB.ReadFromMonthTable(connectionString);
+            scadaDB.InsertInYearTable(yearItems, queryStmt4, connectionString);
 
         }
         private void InitializeAndStartThreads()
