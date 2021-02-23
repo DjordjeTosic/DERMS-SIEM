@@ -136,6 +136,9 @@
     <Compile Include="View\NetworkModelUserControl.xaml.cs">
       <DependentUpon>NetworkModelUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\OverViewUserControl.xaml.cs">
+      <DependentUpon>OverViewUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PopUpWindow.xaml.cs">
       <DependentUpon>PopUpWindow.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NetworkModelUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\OverViewUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

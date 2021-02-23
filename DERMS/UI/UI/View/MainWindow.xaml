@@ -108,13 +108,63 @@
                             </Button>
                         </MenuItem>
                     </Menu>
-                    <Button Cursor="Hand" x:Name="SIEM" Width="Auto" Height="Auto" Background="Transparent" BorderBrush="Transparent" Foreground="#FF0398E2"
+					<Menu Cursor="Hand" Opacity="0.9" FontSize="14" VerticalAlignment="Center" Background="#FF303030" FontFamily="Champagne &amp; Limousines" Foreground="#FF0398E2" HorizontalAlignment="Center" Height="28" FontWeight="Bold">
+						<MenuItem Background="#FF303030" Height="28" Width="Auto">
+							<MenuItem.Header>
+								<Grid Width="Auto">
+									<materialDesign:PackIcon Kind="Security" VerticalAlignment="Center"/>
+									<TextBlock Width="Auto" Text="SIEM" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,0,0"/>
+								</Grid>
+							</MenuItem.Header>
+							<Button Cursor="Hand" x:Name="ServicesOverview" Width="Auto" Height="Auto" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Foreground="#FF0398E2">
+								<i:Interaction.Triggers>
+									<i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+										<i:CallMethodAction MethodName="OnMouseClick" TargetObject="{Binding}" />
+									</i:EventTrigger>
+								</i:Interaction.Triggers>
+								<Grid Width="145">
+									<TextBlock HorizontalAlignment="Center" Text="Services Overview" FontFamily="Champagne &amp; Limousines"/>
+								</Grid>
+							</Button>
+							<Button Cursor="Hand" x:Name="CalculationEngine" Width="Auto" Height="Auto" Background="Transparent"  BorderBrush="Transparent" Foreground="#FF0398E2">
+								<i:Interaction.Triggers>
+									<i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+										<i:CallMethodAction MethodName="OnMouseClick" TargetObject="{Binding}" />
+									</i:EventTrigger>
+								</i:Interaction.Triggers>
+								<Grid Width="145">
+									<TextBlock HorizontalAlignment="Center" Text="CalculationEngine" FontFamily="Champagne &amp; Limousines"/>
+								</Grid>
+							</Button>
+							<Button Cursor="Hand" x:Name="Scada" Width="Auto" Height="Auto" Background="Transparent"  BorderBrush="Transparent" Foreground="#FF0398E2">
+								<i:Interaction.Triggers>
+									<i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+										<i:CallMethodAction MethodName="OnMouseClick" TargetObject="{Binding}" />
+									</i:EventTrigger>
+								</i:Interaction.Triggers>
+								<Grid Width="145">
+									<TextBlock HorizontalAlignment="Center" Text="Scada" FontFamily="Champagne &amp; Limousines"/>
+								</Grid>
+							</Button>
+							<Button Cursor="Hand" x:Name="NetworkModelService" Width="Auto" Height="Auto" Background="Transparent"  BorderBrush="Transparent" Foreground="#FF0398E2">
+								<i:Interaction.Triggers>
+									<i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+										<i:CallMethodAction MethodName="OnMouseClick" TargetObject="{Binding}" />
+									</i:EventTrigger>
+								</i:Interaction.Triggers>
+								<Grid Width="145">
+									<TextBlock HorizontalAlignment="Center" Text="NetworkModelService" FontFamily="Champagne &amp; Limousines"/>
+								</Grid>
+							</Button>
+						</MenuItem>
+					</Menu>
+					<!--<Button Cursor="Hand" x:Name="SIEM" Width="Auto" Height="Auto" Background="Transparent" BorderBrush="Transparent" Foreground="#FF0398E2"
                             Command="{Binding Path=MenuSelectCommand}" CommandParameter="{Binding ElementName=root, Path=(FocusManager.FocusedElement)}">
                         <Grid Width="145">
                             <materialDesign:PackIcon Kind="Security"  VerticalAlignment="Center"/>
                             <TextBlock HorizontalAlignment="Center" Text="SIEM" FontFamily="Champagne &amp; Limousines"/>
                         </Grid>
-                    </Button>
+                    </Button>-->
                 </StackPanel>
             </Border>
         </Grid>

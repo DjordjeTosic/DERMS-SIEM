@@ -599,3 +599,10 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHos
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\NetworkModelServiceSelfHost.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\FTN_NetworkModelService.exe
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\FTN_NetworkModelService.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\bin\FTN_NetworkModelService.exe.config
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\bin\FTN_NetworkModelService.exe
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\bin\FTN_NetworkModelService.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\NetworkModelServiceSelfHost.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\NetworkModelServiceSelfHost.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\FTN_NetworkModelService.exe
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\obj\x86\Debug\FTN_NetworkModelService.pdb

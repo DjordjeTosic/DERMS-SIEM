@@ -277,7 +277,7 @@ namespace UI.ViewModel
                     UserControlPresenter = new HistoryUserControl();
                     ((HistoryUserControlViewModel)UserControlPresenter.DataContext).NetworkModel = _networkModelTreeClass;
                     break;
-                case "SIEM":
+                case "CalculationEngine":
                     UserControlPresenter = new SIEMUserControl();
                     break;
                 default:

@@ -493,3 +493,9 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\De
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\NetworkModelService.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.dll
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\bin\FTN.Services.NetworkModelService.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\bin\FTN.Services.NetworkModelService.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\NetworkModelService.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\NetworkModelService.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\ModelLabs\NetworkModelService\obj\x86\Debug\FTN.Services.NetworkModelService.pdb

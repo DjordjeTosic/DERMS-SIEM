@@ -49,7 +49,7 @@ namespace dCom.Configuration
         private bool timerThreadStopSignal = true;
         private bool disposed = false;
 
-        private DERMSCommon.SCADACommon.ScadaDB scadaDB = new DERMSCommon.SCADACommon.ScadaDB();
+        //private DERMSCommon.SCADACommon.ScadaDB scadaDB = new DERMSCommon.SCADACommon.ScadaDB();
 
         public ConnectionState ConnectionState
         {
@@ -260,11 +260,11 @@ namespace dCom.Configuration
             Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.YearItem> yearItems = new Dictionary<Tuple<long, DateTime>, DERMSCommon.SCADACommon.YearItem>();
 
 
-            collectItems = scadaDB.ConvertDataPoints(datapoints);
+            //collectItems = scadaDB.ConvertDataPoints(datapoints);
 
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SCADA;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            string queryStmt1 = "INSERT INTO dbo.Collect(Timestamp, Gid, Production) VALUES(@Timestamp, @Gid, @Production)";
-            scadaDB.InsertInCollectTable(collectItems, queryStmt1, connectionString);
+            //string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SCADA;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //string queryStmt1 = "INSERT INTO dbo.Collect(Timestamp, Gid, Production) VALUES(@Timestamp, @Gid, @Production)";
+            //scadaDB.InsertInCollectTable(collectItems, queryStmt1, connectionString);
 
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
 
@@ -276,44 +276,44 @@ namespace dCom.Configuration
             //    }
             //}
 
-            using (System.Data.SqlClient.SqlConnection _con = new System.Data.SqlClient.SqlConnection(connectionString))
-            {
-                foreach (var d in keyValuePairs)
-                {
-                    using (System.Data.SqlClient.SqlCommand _cmd = new System.Data.SqlClient.SqlCommand(queryStmt1, _con))
-                    {
+            //using (System.Data.SqlClient.SqlConnection _con = new System.Data.SqlClient.SqlConnection(connectionString))
+            //{
+            //    foreach (var d in keyValuePairs)
+            //    {
+            //        using (System.Data.SqlClient.SqlCommand _cmd = new System.Data.SqlClient.SqlCommand(queryStmt1, _con))
+            //        {
 
-                        System.Data.SqlClient.SqlParameter param1 = _cmd.Parameters.Add("@Gid", System.Data.SqlDbType.BigInt);
-                        System.Data.SqlClient.SqlParameter param6 = _cmd.Parameters.Add("@Timestamp", System.Data.SqlDbType.DateTime);
-                        System.Data.SqlClient.SqlParameter param7 = _cmd.Parameters.Add("@P", System.Data.SqlDbType.Float);
+            //            System.Data.SqlClient.SqlParameter param1 = _cmd.Parameters.Add("@Gid", System.Data.SqlDbType.BigInt);
+            //            System.Data.SqlClient.SqlParameter param6 = _cmd.Parameters.Add("@Timestamp", System.Data.SqlDbType.DateTime);
+            //            System.Data.SqlClient.SqlParameter param7 = _cmd.Parameters.Add("@P", System.Data.SqlDbType.Float);
 
-                        param1.Value = d.Value.Split('|')[0];
-                        param6.Value = d.Value.Split('|')[1];
-                        param7.Value = d.Value.Split('|')[2];
-                        _con.Open();
-                        try
-                        {
-                            _cmd.ExecuteNonQuery();
-                        }
-                        catch (Exception e)
-                        { }
+            //            param1.Value = d.Value.Split('|')[0];
+            //            param6.Value = d.Value.Split('|')[1];
+            //            param7.Value = d.Value.Split('|')[2];
+            //            _con.Open();
+            //            try
+            //            {
+            //                _cmd.ExecuteNonQuery();
+            //            }
+            //            catch (Exception e)
+            //            { }
 
-                        _con.Close();
-                    }
-                }
-            }
+            //            _con.Close();
+            //        }
+            //    }
+            //}
 
-            dayItems = scadaDB.ReadFromCollectTable(connectionString);
-            string queryStmt2 = "INSERT INTO dbo.Day(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
-            scadaDB.InsertInDayTable(dayItems, queryStmt2, connectionString);
+            //dayItems = scadaDB.ReadFromCollectTable(connectionString);
+            //string queryStmt2 = "INSERT INTO dbo.Day(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
+            //scadaDB.InsertInDayTable(dayItems, queryStmt2, connectionString);
 
-            string queryStmt3 = "INSERT INTO dbo.Month(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
-            monthItems = scadaDB.ReadFromDayTable(connectionString);
-            scadaDB.InsertInMonthTable(monthItems, queryStmt3, connectionString);
+            //string queryStmt3 = "INSERT INTO dbo.Month(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
+            //monthItems = scadaDB.ReadFromDayTable(connectionString);
+            //scadaDB.InsertInMonthTable(monthItems, queryStmt3, connectionString);
 
-            string queryStmt4 = "INSERT INTO dbo.Year(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
-            yearItems = scadaDB.ReadFromMonthTable(connectionString);
-            scadaDB.InsertInYearTable(yearItems, queryStmt4, connectionString);
+            //string queryStmt4 = "INSERT INTO dbo.Year(Gid, Pmin, Pmax, Pavg, E, Timestamp) VALUES(@Gid, @Pmin, @Pmax, @Pavg, @E, @Timestamp)";
+            //yearItems = scadaDB.ReadFromMonthTable(connectionString);
+            //scadaDB.InsertInYearTable(yearItems, queryStmt4, connectionString);
 
         }
         private void InitializeAndStartThreads()

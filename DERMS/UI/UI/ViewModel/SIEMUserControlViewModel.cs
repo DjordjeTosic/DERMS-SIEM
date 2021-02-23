@@ -338,6 +338,7 @@ namespace UI.ViewModel
                 Thread.Sleep(2000);
             }
         }
+
         private void FilterOnOff(object obj)
         {
             if (FilterVisibility == Visibility.Collapsed)

@@ -184,8 +184,13 @@ namespace CyberAttackSimulationTool
 
             sendToScada = factory.CreateChannel();
             bool result = false;
-            result = sendToScada.CheckForTM(signalsTransfer);
-            result = sendToScada.SendGids(signalsTransfer);
+			int i = 0;
+			while (i != 100)
+			{
+				result = sendToScada.CheckForTM(signalsTransfer);
+				result = sendToScada.SendGids(signalsTransfer);
+				i++;
+			}
         }
         public void Connect()
         {

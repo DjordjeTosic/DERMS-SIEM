@@ -122,7 +122,7 @@ namespace dCom.ViewModel
 
             openConnection();
             //InitializePointCollection();
-            InitializeAndStartThreads();
+            //InitializeAndStartThreads();
             logBuilder = new StringBuilder();
             ConnectionState = ConnectionState.CONNECTED;
             Thread.CurrentThread.Name = "Main Thread";
@@ -418,7 +418,7 @@ namespace dCom.ViewModel
 
         private void InitializeTimerThread()
         {
-            timerWorker = new Thread(TimerWorker_DoWork);
+			timerWorker = new Thread(TimerWorker_DoWork);
             timerWorker.Name = "Timer Thread";
         }
 

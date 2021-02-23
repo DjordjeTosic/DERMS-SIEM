@@ -13,7 +13,7 @@ namespace SIEM
         static void Main(string[] args)
         {
             ServiceManager  serviceManager = new ServiceManager();
-            string path = @"C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\Loggs\CalculationEngine.txt";
+            string path = @"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\CalculationEngine.txt";
             using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
 

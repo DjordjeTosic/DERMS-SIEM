@@ -590,3 +590,11 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\Pr
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
