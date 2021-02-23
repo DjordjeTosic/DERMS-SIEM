@@ -21,7 +21,7 @@ namespace SIEMServices
            
 
             //Open service for UI
-            string address = String.Format("net.tcp://localhost:12001/ISIEMSendToUI");
+            string address = String.Format("net.tcp://192.168.137.2:12001/ISIEMSendToUI");
             NetTcpBinding binding = new NetTcpBinding();
            // binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
             serviceHost = new ServiceHost(typeof(SIEMSendToUI));

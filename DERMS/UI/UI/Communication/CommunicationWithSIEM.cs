@@ -16,7 +16,7 @@ namespace UI.Communication
         public CommunicationWithSIEM()
         {
             factory = new ChannelFactory<ISIEMSendToUI>(new NetTcpBinding(),
-                                                                    new EndpointAddress("net.tcp://localhost:12001/ISIEMSendToUI"));
+                                                                    new EndpointAddress("net.tcp://192.168.137.2:12001/ISIEMSendToUI"));
         }
         public void Open()
         {
