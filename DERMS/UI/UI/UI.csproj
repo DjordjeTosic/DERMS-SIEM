@@ -109,6 +109,8 @@
     <Compile Include="ViewModel\HistoryUserControlViewModel.cs" />
     <Compile Include="ViewModel\ManualCommandingViewModel.cs" />
     <Compile Include="ViewModel\NetworkModelUserControlViewModel.cs" />
+    <Compile Include="ViewModel\NMSUserControlViewModel.cs" />
+    <Compile Include="ViewModel\ScadaUserControlViewModel.cs" />
     <Compile Include="ViewModel\SIEMUserControlViewModel.cs" />
     <Compile Include="ViewModel\SignalsSummaryUserControlViewModel.cs" />
     <Compile Include="View\BreakerControlThroughGISWindow.xaml.cs">
@@ -136,11 +138,17 @@
     <Compile Include="View\NetworkModelUserControl.xaml.cs">
       <DependentUpon>NetworkModelUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NMSUserControl.xaml.cs">
+      <DependentUpon>NMSUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OverViewUserControl.xaml.cs">
       <DependentUpon>OverViewUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PopUpWindow.xaml.cs">
       <DependentUpon>PopUpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ScadaUserControl.xaml.cs">
+      <DependentUpon>ScadaUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SIEMUserControl.xaml.cs">
       <DependentUpon>SIEMUserControl.xaml</DependentUpon>
@@ -196,11 +204,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NMSUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\OverViewUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PopUpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ScadaUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

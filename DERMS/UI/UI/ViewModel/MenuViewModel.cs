@@ -280,7 +280,13 @@ namespace UI.ViewModel
                 case "CalculationEngine":
                     UserControlPresenter = new SIEMUserControl();
                     break;
-                default:
+				case "Scada":
+					UserControlPresenter = new ScadaUserControl();
+					break;
+				case "NetworkModelService":
+					UserControlPresenter = new NMSUserControl();
+					break;
+				default:
                     MessageBox.Show("There was a problem while opening view. Try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     break;
             }

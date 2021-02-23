@@ -1,0 +1,182 @@
+﻿<UserControl x:Class="UI.View.ScadaUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UI.View"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:ViewModel="clr-namespace:UI.ViewModel"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="533" d:DesignWidth="1024">
+	<Grid>
+		<Grid.DataContext>
+			<ViewModel:ScadaUserControlViewModel/>
+		</Grid.DataContext>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="30" />
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="30" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="300"/>
+		</Grid.ColumnDefinitions>
+		<Grid Grid.Row="0" Grid.ColumnSpan="2" MinHeight="{Binding MinHeightFilter}">
+			<Button Margin="10,7,0,0" HorizontalAlignment="Left" ToolTip="Filters" VerticalAlignment="Top" Cursor="Hand" Background="Transparent" BorderBrush="Transparent" Width="50" Height="25" Command="{Binding Path=FilterOnOffCommand}">
+				<Grid>
+					<materialDesign:PackIcon Kind="FilterMenu" Foreground="#FF0398E2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+				</Grid>
+			</Button>
+
+			<ComboBox ToolTip="Type" Foreground="#FF0398E2" HorizontalContentAlignment="Center" ItemsSource="{Binding FilterType}" SelectedItem="{Binding SignalsSummaryFilter.SelectedFilterType}" Visibility="{Binding Path=FilterVisibility}" HorizontalAlignment="Left" Margin="60,31,0,0" VerticalAlignment="Top" Width="150" BorderThickness="1" BorderBrush="#FF0398E2"/>
+			<TextBox Background="Transparent"  FontStyle="Italic" Foreground="#FF0398E2" BorderBrush="#FF0398E2" Width="250" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding SIEMFilter.Address}" Margin="280,0,0,0" ToolTip="Address" BorderThickness="0 0 0 1" Visibility="{Binding Path=FilterVisibility}">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="GotFocus">
+						<i:CallMethodAction MethodName="OnFocusAddress" TargetObject="{Binding}" />
+					</i:EventTrigger>
+					<i:EventTrigger EventName="LostFocus">
+						<i:CallMethodAction MethodName="OnOffFocusAddress" TargetObject="{Binding}" />
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</TextBox>
+
+
+			<DatePicker SelectedDate="{Binding SIEMFilter.From}" Height="25" ToolTip="From" Margin="732,10,0,63" BorderBrush="#FF0398E2" BorderThickness="0" Foreground="#FF0398E2" Visibility="{Binding Path=FilterVisibility}" HorizontalAlignment="Left" Width="150"/>
+			<DatePicker SelectedDate="{Binding SIEMFilter.To}" Height="25" ToolTip="To" Margin="732,42,0,31" BorderBrush="#FF0398E2" BorderThickness="0" Foreground="#FF0398E2" Visibility="{Binding Path=FilterVisibility}" HorizontalAlignment="Left" Width="150"/>
+			<TextBox  Background="Transparent"  FontStyle="Italic" Foreground="#FF0398E2" BorderBrush="#FF0398E2" Width="350" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding SIEMFilter.Content}" Margin="280,50,0,0" ToolTip="GID" BorderThickness="0 0 0 1" Visibility="{Binding Path=FilterVisibility}">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="GotFocus">
+						<i:CallMethodAction MethodName="OnFocusGID" TargetObject="{Binding}" />
+					</i:EventTrigger>
+					<i:EventTrigger EventName="LostFocus">
+						<i:CallMethodAction MethodName="OnOffFocusGID" TargetObject="{Binding}" />
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</TextBox>
+			<Button Height="20" Margin="910,26,0,26" Content="Filter" Background="Transparent" Foreground="#FF0398E2" Style="{DynamicResource HoverButtonEffect}" Command="{Binding Path=ApplyFiltersCommand}" Visibility="{Binding FilterVisibility}" HorizontalAlignment="Left" Width="84"/>
+			<CheckBox Content="Filter by time" HorizontalAlignment="Left" IsChecked="{Binding SignalsSummaryFilter.FilterByTime}" Margin="732,72,0,8" Background="#FF0398E2" BorderThickness="1" BorderBrush="#FF0398E2" Foreground="#FF0398E2" Visibility="{Binding Path=FilterVisibility}"/>
+		</Grid>
+		<Grid Grid.Row="1" Grid.ColumnSpan="2">
+			<DataGrid BorderThickness="1" BorderBrush="#FF0398E2" ItemsControl.ItemsSource="{Binding SiemData}" SelectionMode="Single" AutoGenerateColumns="False" CanUserAddRows="False"
+				  CanUserDeleteRows="False" CanUserResizeRows="False" SelectionUnit="FullRow" Background="Transparent" SelectedItem="{Binding SelectedDataItem}" Foreground="#FF0398E2" FontWeight="Bold" FontSize="14">
+
+
+				<DataGrid.RowStyle>
+					<Style TargetType="DataGridRow">
+						<Setter Property="BorderThickness" Value="0"/>
+						<Setter Property="Background" Value="Transparent"/>
+						<Setter Property="IsHitTestVisible" Value="True"/>
+						<Style.Triggers>
+							<Trigger Property="IsMouseOver"
+                           Value="True">
+								<Setter Property="Background" Value="#474343" />
+							</Trigger>
+							<Trigger Property="IsSelected" Value="True" >
+								<Setter Property="Background" Value="#FFDEDEDE" />
+							</Trigger>
+						</Style.Triggers>
+					</Style>
+				</DataGrid.RowStyle>
+
+				<DataGrid.Columns>
+					<DataGridTemplateColumn IsReadOnly="True" Width="Auto" >
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<materialDesign:PackIcon Kind="{Binding AlarmImage}" Foreground="{Binding AlarmImageColor}" VerticalAlignment="Center"/>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+
+					<DataGridTextColumn Binding="{Binding TimeOfEvent}" IsReadOnly="True" Width="Auto" MinWidth="200" >
+						<DataGridTextColumn.Header>
+							<Label  Foreground="#FF0398E2" FontWeight="Bold" FontSize="16">Timestamp</Label>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+					<DataGridTextColumn Binding="{Binding Address, StringFormat={}{0:d5}}" IsReadOnly="True" Width="Auto" MinWidth="120" >
+						<DataGridTextColumn.Header>
+							<Label  Foreground="#FF0398E2" FontWeight="Bold" FontSize="16">Address</Label>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+
+
+					<DataGridTextColumn Binding="{Binding Loglevel}" IsReadOnly="True" Width="Auto" MinWidth="210" >
+						<DataGridTextColumn.Header>
+							<Label  Foreground="#FF0398E2" FontWeight="Bold" FontSize="16">Log Level</Label>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+
+					<DataGridTextColumn Binding="{Binding EventInfo}" IsReadOnly="True" Width="Auto" >
+						<DataGridTextColumn.Header>
+							<Label  Foreground="#FF0398E2" FontWeight="Bold" FontSize="16">Event Description</Label>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+				</DataGrid.Columns>
+			</DataGrid>
+		</Grid>
+		<Grid Grid.Row="2" Grid.ColumnSpan="2">
+			<StatusBar Background="Transparent" Grid.Row="2" Grid.ColumnSpan="2">
+				<StatusBarItem>
+					<Border Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<Label Foreground="#FF0398E2" Content="REGULAR EVENT" TextBlock.FontWeight="Bold" />
+
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+				<StatusBarItem>
+					<Border Background="Transparent"  Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<materialDesign:PackIcon Kind="Shield" Foreground="Green" Width="20" Height="20"/>
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+				<StatusBarItem>
+					<Border Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<Label Foreground="#FF0398E2" Content="|" TextBlock.FontWeight="Bold" />
+
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+
+				<StatusBarItem>
+					<Border Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<Label Foreground="#FF0398E2" Content="POSSIBLE DDOS ATTACK" TextBlock.FontWeight="Bold" />
+
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+				<StatusBarItem>
+					<Border Background="Transparent"  Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<materialDesign:PackIcon Kind="Shield" Foreground="Orange" Width="20" Height="20"/>
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+
+			</StatusBar>
+		</Grid>
+		<Grid Grid.Row="3">
+			<lvc:CartesianChart x:Name="cartesianChart" Margin="10,0,-10,0" >
+				<lvc:CartesianChart.Series>
+					<lvc:StepLineSeries Configuration="{Binding mapper}" PointGeometrySize="12" PointForeground="White" Fill="{Binding Color1}"  Values="{Binding ChartValues1}" Visibility="{Binding VisibilityCPU}" />
+					<lvc:StepLineSeries Configuration="{Binding mapper}" PointGeometrySize="12" PointForeground="White" Fill="{Binding Color2}" Values="{Binding ChartValues2}" Visibility="{Binding VisibilityRAM}" />
+				</lvc:CartesianChart.Series>
+			</lvc:CartesianChart>
+
+		</Grid>
+		<Grid Grid.Row="4">
+			<CheckBox Background="Aqua" Foreground="Aqua" Content="CPUUsage" HorizontalAlignment="Left" Height="24"  VerticalAlignment="Top" Width="244" IsChecked="{Binding ShowCPU}" Margin="24,-4,0,0" />
+			<CheckBox Background="Tomato" Foreground="Tomato" Content="RAMUsage" HorizontalAlignment="Left" Height="24"  VerticalAlignment="Top" Width="275" IsChecked="{Binding ShowRAM}" Margin="273,-4,0,0" />
+		</Grid>
+		<Grid Grid.Row="3" Grid.RowSpan="2" Grid.Column="1">
+			<materialDesign:PackIcon Kind="Shield" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{Binding AlertColor}" Width="200" Height="150"/>
+			<TextBox Text="{Binding AlertText}" TextAlignment="Center" Width="263" FontSize="14" Foreground="#FF0398E2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10,0,27,9" />
+		</Grid>
+	</Grid>
+</UserControl>
