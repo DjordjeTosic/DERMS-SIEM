@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -169,15 +170,16 @@ namespace CyberAttackSimulationTool
             tempDic.Add(temp1.GlobalId, temp1);
             tempDic.Add(temp2.GlobalId, temp2);
             tempDic.Add(temp3.GlobalId, temp3);
-            tempDic.Add(temp4.GlobalId, temp4);
-            tempDic.Add(temp5.GlobalId, temp5);
-            tempDic.Add(temp6.GlobalId, temp6);
-            tempDic.Add(temp7.GlobalId, temp7);
-            tempDic.Add(temp8.GlobalId, temp8);
-            tempDic.Add(temp9.GlobalId, temp9);
-
-            insert.Add(0, tempDic);
+			tempDic.Add(temp4.GlobalId, temp4);
+			tempDic.Add(temp5.GlobalId, temp5);
+			tempDic.Add(temp6.GlobalId, temp6);
+			tempDic.Add(temp7.GlobalId, temp7);
+			tempDic.Add(temp8.GlobalId, temp8);
+			tempDic.Add(temp9.GlobalId, temp9);
+			
+			insert.Add(0, tempDic);
             SignalsTransfer signalsTransfer = new SignalsTransfer(insert, update, delete);
+			//int siz = Marshal.SizeOf(signalsTransfer);
             NetTcpBinding binding = new NetTcpBinding();
             binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
             factory = new ChannelFactory<ISendDataFromNMSToScada>(binding, new EndpointAddress("net.tcp://localhost:19012/ISendDataFromNMSToScada"));
@@ -185,7 +187,8 @@ namespace CyberAttackSimulationTool
             sendToScada = factory.CreateChannel();
             bool result = false;
 			int i = 0;
-			while (i != 100)
+			
+			while (i != 5)
 			{
 				result = sendToScada.CheckForTM(signalsTransfer);
 				result = sendToScada.SendGids(signalsTransfer);

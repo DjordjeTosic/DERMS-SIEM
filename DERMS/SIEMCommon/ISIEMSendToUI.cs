@@ -13,5 +13,7 @@ namespace SIEMCommon
     {
         [OperationContract]
         List<SIEMData> Hello();
-    }
+		[OperationContract]
+		List<SIEMData> GetScadaLog();
+	}
 }

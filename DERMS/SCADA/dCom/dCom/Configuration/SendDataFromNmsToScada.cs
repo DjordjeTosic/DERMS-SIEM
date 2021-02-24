@@ -17,6 +17,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.ServiceModel;
 using System.Text;
 using System.Threading;
@@ -92,7 +93,8 @@ namespace dCom.Configuration
         }
         public bool CheckForTM(SignalsTransfer signals)
         {
-            
+			//int vel = Marshal.SizeOf(signals);
+			Logger.LogSimulatorValues("Unknown","Scada recived model. Size of model is ", Enums.LogLevel.Info, 248);
             SignalsTransfer = signals;
             if (signals != null)
                 return true;

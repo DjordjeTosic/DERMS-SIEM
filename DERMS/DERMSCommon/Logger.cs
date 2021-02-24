@@ -17,10 +17,10 @@ namespace DERMSCommon
 
         static Logger()
         {
-            path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\DERMS_Log.txt");
-            path2 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\GeneratorValues.txt");
-            path3 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\SimulatorValues.txt");
-            path4 = Path.Combine(@"C: \Users\Djole\Desktop\DERMS-SIEM\DERMS\Loggs\CalculationEngine.txt");
+            path = Path.Combine(@"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\DERMS_Log.txt");
+            path2 = Path.Combine(@"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\GeneratorValues.txt");
+            path3 = Path.Combine(@"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\ScadaLog.txt");
+            path4 = Path.Combine(@"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\CalculationEngine.txt");
         }
 
         public static void Log(string message,Enums.Component component, Enums.LogLevel logLevel)
@@ -71,7 +71,7 @@ namespace DERMSCommon
                 Console.WriteLine(e.StackTrace);
             }
         }
-        public static void LogSimulatorValues(string message, Enums.LogLevel logLevel, float value)
+        public static void LogSimulatorValues(string IP,string message, Enums.LogLevel logLevel, int value)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace DERMSCommon
 
                 using (StreamWriter writter = File.AppendText(path3))
                 {
-                    writter.Write(DateTime.Now + "   " + message + " " + logLevel.ToString() + " Value:  " + value + "\r\n");
+                    writter.Write(DateTime.Now + "   " + IP + "  " + logLevel.ToString() + "   " + message + value+ " bytes." + "\r\n");
                     writter.Close();
                 }
             }

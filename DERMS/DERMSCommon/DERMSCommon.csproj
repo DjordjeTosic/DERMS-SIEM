@@ -117,6 +117,7 @@
     <Compile Include="SCADACommon\ScadaDB.cs" />
     <Compile Include="SCADACommon\YearItem.cs" />
     <Compile Include="SIEMData.cs" />
+    <Compile Include="SIEMScadaData.cs" />
     <Compile Include="SmartCache\SCADADataPointSmartCache.cs" />
     <Compile Include="SmartCache\WeatherForecastSmartCache.cs" />
     <Compile Include="TransactionManager\ITransactionCheck.cs" />

@@ -58,7 +58,7 @@ namespace UI.ViewModel
 			proxy = new CommunicationWithSIEM();
 			proxy.Open();
 			SiemData = new ObservableCollection<SIEMData>();
-
+			
 			ShowCPU = true;
 			ShowRAM = true;
 			CpuUsage = "";
@@ -296,7 +296,7 @@ namespace UI.ViewModel
 				{
 					tempSiem2.Add(s);
 				}
-				tempSiem = proxy.sendToSIEM.Hello();
+				tempSiem = proxy.sendToSIEM.GetScadaLog();
 				foreach (SIEMData s in tempSiem)
 				{
 					tempSiem2.Add(s);
@@ -319,7 +319,7 @@ namespace UI.ViewModel
 							siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.Shield;
 							siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffffa500"));
 							siem.AlarmImageColor.Freeze();
-							AlertText = "CalculationEngine is under DDoS attack!";
+							AlertText = "SCADA is under DDoS attack!";
 							AlertColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffffa500"));
 							AlertColor.Freeze();
 							break;

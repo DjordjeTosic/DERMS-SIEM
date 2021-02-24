@@ -146,7 +146,7 @@
 									<TextBlock HorizontalAlignment="Center" Text="Scada" FontFamily="Champagne &amp; Limousines"/>
 								</Grid>
 							</Button>
-							<Button Cursor="Hand" x:Name="NetworkModelService" Width="Auto" Height="Auto" Background="Transparent"  BorderBrush="Transparent" Foreground="#FF0398E2">
+							<!--<Button Cursor="Hand" x:Name="NetworkModelService" Width="Auto" Height="Auto" Background="Transparent"  BorderBrush="Transparent" Foreground="#FF0398E2">
 								<i:Interaction.Triggers>
 									<i:EventTrigger EventName="PreviewMouseLeftButtonDown">
 										<i:CallMethodAction MethodName="OnMouseClick" TargetObject="{Binding}" />
@@ -155,7 +155,7 @@
 								<Grid Width="145">
 									<TextBlock HorizontalAlignment="Center" Text="NetworkModelService" FontFamily="Champagne &amp; Limousines"/>
 								</Grid>
-							</Button>
+							</Button>-->
 						</MenuItem>
 					</Menu>
 					<!--<Button Cursor="Hand" x:Name="SIEM" Width="Auto" Height="Auto" Background="Transparent" BorderBrush="Transparent" Foreground="#FF0398E2"
