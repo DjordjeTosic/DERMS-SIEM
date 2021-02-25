@@ -76,6 +76,10 @@
       <Project>{B1E36476-2A09-4271-B336-3158CBD9DF2F}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\SIEMCommon\SIEMCommon.csproj">
+      <Project>{2302A21D-D3C7-451C-89A8-E659701432A9}</Project>
+      <Name>SIEMCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\WeatherForecast\WeatherForecast.csproj">
       <Project>{7CD8706F-8BD8-497C-93A4-EB072FA58EB5}</Project>
       <Name>WeatherForecast</Name>

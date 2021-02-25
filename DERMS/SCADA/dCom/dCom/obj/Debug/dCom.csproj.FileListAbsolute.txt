@@ -2542,3 +2542,5 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\SIEMCommon.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\SIEMCommon.pdb

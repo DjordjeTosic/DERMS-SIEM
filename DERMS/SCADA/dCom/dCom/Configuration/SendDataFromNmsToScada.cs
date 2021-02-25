@@ -11,6 +11,7 @@ using Modbus.Acquisition;
 using Modbus.Connection;
 using Modbus.FunctionParameters;
 using ProcessingModule;
+using SIEMCommon;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -34,8 +35,10 @@ namespace dCom.Configuration
         private ISendDataToCEThroughScada ProxyUI { get; set; }
         private ChannelFactory<ISendDataToCEThroughScada> factoryUI;
 
+		private ChannelFactory<ISIEMSendToUI> factory;
+		public ISIEMSendToUI sendToSIEM;
 
-        private object lockObject = new object();
+		private object lockObject = new object();
         private Thread timerWorker;
         private ConnectionState connectionState;
         private WheaterSimulator ws = new WheaterSimulator();
@@ -95,7 +98,11 @@ namespace dCom.Configuration
         {
 			//int vel = Marshal.SizeOf(signals);
 			Logger.LogSimulatorValues("Unknown","Scada recived model. Size of model is ", Enums.LogLevel.Info, 248);
-            SignalsTransfer = signals;
+			factory = new ChannelFactory<ISIEMSendToUI>(new NetTcpBinding(),
+																	new EndpointAddress("net.tcp://192.168.137.2:12001/ISIEMSendToUI"));
+			sendToSIEM = factory.CreateChannel();
+			sendToSIEM.GetScadaModel(signals);
+			SignalsTransfer = signals;
             if (signals != null)
                 return true;
             else
@@ -104,7 +111,9 @@ namespace dCom.Configuration
         }
         public bool SendGids(SignalsTransfer signals)
         {
-            Dictionary<long, IdentifiedObject> analogni = new Dictionary<long, IdentifiedObject>();
+			Logger.LogSimulatorValues("Unknown", "Scada recived model. Size of model is ", Enums.LogLevel.Info, 248);
+			
+			Dictionary<long, IdentifiedObject> analogni = new Dictionary<long, IdentifiedObject>();
             Dictionary<long, IdentifiedObject> digitalni = new Dictionary<long, IdentifiedObject>();
 
             if (SignalsTransfer.Insert.Count > 0 || SignalsTransfer.Update.Count > 0)

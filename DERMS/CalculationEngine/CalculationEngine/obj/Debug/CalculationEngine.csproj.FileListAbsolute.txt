@@ -1595,3 +1595,5 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\CalculationEngine\CalculationEngine\ob
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\CalculationEngine\CalculationEngine\bin\Debug\SIEMCommon.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\CalculationEngine\CalculationEngine\bin\Debug\SIEMCommon.pdb

@@ -49,5 +49,6 @@ namespace DERMSCommon.NMSCommuication
                 return _delete;
             }
         }
-    }
+		
+	}
 }

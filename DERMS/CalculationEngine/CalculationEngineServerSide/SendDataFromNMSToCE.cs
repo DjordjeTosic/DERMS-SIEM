@@ -2,10 +2,11 @@
 using DERMSCommon.NMSCommuication;
 using DERMSCommon.WeatherForecast;
 using FTN.Common;
-
+using SIEMCommon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,9 +16,15 @@ namespace CalculationEngineService
     {
         private static NetworkModelTransfer _nmt = null;
         public NetworkModelTransfer Nmt { get => _nmt; set => _nmt = value; }
-        public bool CheckForTM(NetworkModelTransfer networkModel)
+		private ChannelFactory<ISIEMSendToUI> factory;
+		public ISIEMSendToUI sendToSIEM;
+		public bool CheckForTM(NetworkModelTransfer networkModel)
         {
-            Nmt = networkModel;
+			factory = new ChannelFactory<ISIEMSendToUI>(new NetTcpBinding(),
+																	new EndpointAddress("net.tcp://192.168.137.2:12001/ISIEMSendToUI"));
+			sendToSIEM = factory.CreateChannel();
+			sendToSIEM.GetCEModel(networkModel);
+			Nmt = networkModel;
             if (networkModel != null)
                 return true;
             else
@@ -26,11 +33,12 @@ namespace CalculationEngineService
 
         public bool SendNetworkModel(NetworkModelTransfer networkModel)
         {
-            // TREBA DPDATI U NetworkModelTransfer JEDNO POLJE GDE SE PROVERAVA DA LI JE MODEL UPDATE U PITANJU ILI JE NMS PROSLEDIO CEO MODEL PRILIKOM POKRETANJA APLIKACIJE
-            // U ZAVISNOSTI OD TOGA TREBA POZVATI SLEDECE METODE:
-            // AKO JE U PITANJU MODEL UPDATE POZIVA SE CalculationEngineCache.Instance.RestartCache(networkModel);
-            // AKO JE U PITANJU CITAV MODEL PRILIKOM POKRETANJA APLIKACIJE POZIVA SE CalculationEngineCache.Instance.PopulateNSMModelCache(networkModel);
-            networkModel = Nmt;
+			// TREBA DPDATI U NetworkModelTransfer JEDNO POLJE GDE SE PROVERAVA DA LI JE MODEL UPDATE U PITANJU ILI JE NMS PROSLEDIO CEO MODEL PRILIKOM POKRETANJA APLIKACIJE
+			// U ZAVISNOSTI OD TOGA TREBA POZVATI SLEDECE METODE:
+			// AKO JE U PITANJU MODEL UPDATE POZIVA SE CalculationEngineCache.Instance.RestartCache(networkModel);
+			// AKO JE U PITANJU CITAV MODEL PRILIKOM POKRETANJA APLIKACIJE POZIVA SE CalculationEngineCache.Instance.PopulateNSMModelCache(networkModel);
+			
+			networkModel = Nmt;
             if (networkModel.InitState)
                 CalculationEngineCache.Instance.PopulateNSMModelCache(networkModel);
             else

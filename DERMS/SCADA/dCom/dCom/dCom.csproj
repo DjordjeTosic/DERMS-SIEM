@@ -158,6 +158,10 @@
       <Project>{776eb305-b428-4d01-b4a7-0b05fa59f9b9}</Project>
       <Name>DERMSCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\SIEMCommon\SIEMCommon.csproj">
+      <Project>{2302A21D-D3C7-451C-89A8-E659701432A9}</Project>
+      <Name>SIEMCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{823d1355-efd0-481c-a0d9-fda0c4ea37df}</Project>
       <Name>Common</Name>

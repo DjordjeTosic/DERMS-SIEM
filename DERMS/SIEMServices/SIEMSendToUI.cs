@@ -1,9 +1,11 @@
 ﻿using DERMSCommon;
+using DERMSCommon.NMSCommuication;
 using SIEMCommon;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,7 +15,11 @@ namespace SIEMServices
     public class SIEMSendToUI : ISIEMSendToUI
     {
         public static long pos;
-        public List<SIEMData> Hello()
+		private static SignalsTransfer signalsTransfer;
+		public static SignalsTransfer SignalsTransfer { get => signalsTransfer; set => signalsTransfer = value; }
+		private static NetworkModelTransfer networkModelTransfer;
+		public static NetworkModelTransfer NetworkModelTransfer { get => networkModelTransfer; set => networkModelTransfer = value; }
+		public List<SIEMData> Hello()
         {
             string path = @"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\CalculationEngine.txt";
             List<SIEMData> LogDataForUI = new List<SIEMData>();
@@ -31,7 +37,7 @@ namespace SIEMServices
                             sr.BaseStream.Position = pos;
                             while ((line = sr.ReadLine()) != null)
                             {
-                                string[] parts = line.Split(new[] { "  " }, StringSplitOptions.None);
+                                string[] parts = line.Split(new[] { "   " }, StringSplitOptions.None);
                                 DateTime dateTime = DateTime.Parse(parts[0]);
                                 if (parts[1].Equals(" Unknown")) 
                                     LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3],1));
@@ -79,5 +85,24 @@ namespace SIEMServices
 				return LogDataForUI;
 			}
 		}
+
+		public void GetScadaModel(SignalsTransfer signals)
+		{
+			SignalsTransfer = signals;
+			
+			//SignalsTransfer = CloneClass.DeepClone(SignalsTransfer);
+			if (NetworkModelTransfer != null)
+			{
+
+			}
+		}
+
+		public void GetCEModel(NetworkModelTransfer model)
+		{
+			NetworkModelTransfer = model;
+			//NetworkModelTransfer = CloneClass.DeepClone(NetworkModelTransfer);
+		}
+
+		
 	}
 }

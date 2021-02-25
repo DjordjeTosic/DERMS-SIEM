@@ -1786,3 +1786,5 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\Trans
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\SIEMCommon.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\SIEMCommon.pdb

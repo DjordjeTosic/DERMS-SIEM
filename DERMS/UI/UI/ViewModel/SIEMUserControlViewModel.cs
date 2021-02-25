@@ -335,7 +335,7 @@ namespace UI.ViewModel
                 }
 
                 //CurrentTime = DateTime.Now.ToString("HH:mm:ss");
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
             }
         }
 
