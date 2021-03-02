@@ -286,6 +286,9 @@ namespace UI.ViewModel
 				case "NetworkModelService":
 					UserControlPresenter = new NMSUserControl();
 					break;
+				case "ServicesOverview":
+					UserControlPresenter = new OverViewUserControl();
+					break;
 				default:
                     MessageBox.Show("There was a problem while opening view. Try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     break;

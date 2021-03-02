@@ -312,12 +312,11 @@ namespace CyberAttackSimulationTool
             bool result = false;
 			int i = 0;
 			
-			while (i != 5)
-			{
+			
 				result = sendToScada.CheckForTM(signalsTransfer);
-				result = sendToScada.SendGids(signalsTransfer);
+				//result = sendToScada.SendGids(signalsTransfer);
 				i++;
-			}
+		
         }
         public void Connect()
         {

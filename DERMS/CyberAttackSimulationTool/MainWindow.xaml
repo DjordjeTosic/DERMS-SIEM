@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="StartAttack" Margin="401,143,35,146" Click="Button_Click"></Button>
-        <Button Content="Button" HorizontalAlignment="Left" Height="141" Margin="69,132,0,0" VerticalAlignment="Top" Width="252" Click="Button_Click_1"/>
+        <Button Content="Send Malicious Model" Margin="401,143,35,146" Click="Button_Click"></Button>
+        <Button Content="Start DDoS Attack" HorizontalAlignment="Left" Height="141" Margin="69,132,0,0" VerticalAlignment="Top" Width="252" Click="Button_Click_1"/>
     </Grid>
 </Window>

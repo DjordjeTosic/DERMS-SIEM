@@ -1753,6 +1753,7 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\Transac
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.exe
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\TransactionCoordinator.exe.config
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\TransactionCoordinator.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\TransactionCoordinator.pdb
@@ -1764,8 +1765,8 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\Trans
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\DarkSkyApi.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\WeatherForecast.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\SIEMCommon.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\Polenter.SharpSerializer.dll
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\Innovative.SolarCalculator.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\Innovative.Geometry.Angle.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.dll
@@ -1777,6 +1778,7 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\FTN.C
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\FTN.Services.NetworkModelService.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\WeatherForecast.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\SIEMCommon.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\Polenter.SharpSerializer.xml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\MaterialDesignThemes.Wpf.xml
@@ -1786,5 +1788,3 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\Trans
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\obj\Debug\TransactionCoordinator.pdb
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\SIEMCommon.dll
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\TransactionCoordinator\bin\Debug\SIEMCommon.pdb

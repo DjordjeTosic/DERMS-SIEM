@@ -97,7 +97,9 @@ namespace dCom.Configuration
         public bool CheckForTM(SignalsTransfer signals)
         {
 			//int vel = Marshal.SizeOf(signals);
-			Logger.LogSimulatorValues("Unknown","Scada recived model. Size of model is ", Enums.LogLevel.Info, 248);
+			Logger.LogSimulatorValues("192.168.137.2","Scada recived model. Size of model is ", Enums.LogLevel.Info, 5468);
+			//Logger.LogSimulatorValues("192.168.100.218", "Scada recived model. Size of model is ", Enums.LogLevel.Info, 20468);
+			//Logger.LogSimulatorValues("192.168.100.222", "Scada recived model. Size of model is ", Enums.LogLevel.Info, 20468);
 			factory = new ChannelFactory<ISIEMSendToUI>(new NetTcpBinding(),
 																	new EndpointAddress("net.tcp://192.168.137.2:12001/ISIEMSendToUI"));
 			sendToSIEM = factory.CreateChannel();
@@ -111,7 +113,7 @@ namespace dCom.Configuration
         }
         public bool SendGids(SignalsTransfer signals)
         {
-			Logger.LogSimulatorValues("Unknown", "Scada recived model. Size of model is ", Enums.LogLevel.Info, 248);
+			//Logger.LogSimulatorValues("192.168.137.2", "Scada recived model. Size of model is ", Enums.LogLevel.Info, 20480);
 			
 			Dictionary<long, IdentifiedObject> analogni = new Dictionary<long, IdentifiedObject>();
             Dictionary<long, IdentifiedObject> digitalni = new Dictionary<long, IdentifiedObject>();

@@ -36,6 +36,7 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csproj.CoreCompileIn
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csproj.CopyComplete
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.exe
 C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEM.exe.config
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEM.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\SIEM.pdb
@@ -58,6 +59,5 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignThemes.Wp
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\bin\Debug\MaterialDesignColors.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csprojResolveAssemblyReference.cache
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SIEM\obj\Debug\SIEM.pdb

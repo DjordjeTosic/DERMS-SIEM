@@ -324,8 +324,12 @@ namespace UI.ViewModel
 							AlertColor.Freeze();
 							break;
 						case 2:
-							siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.SecurityAccount;
-							//siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cc0000"));
+							siem.AlarmImage = MaterialDesignThemes.Wpf.PackIconKind.Shield;
+							siem.AlarmImageColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cc0000"));
+							siem.AlarmImageColor.Freeze();
+							AlertText = "SCADA recived faulty model. Possible MitM Attack!";
+							AlertColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cc0000"));
+							AlertColor.Freeze();
 							break;
 
 					}

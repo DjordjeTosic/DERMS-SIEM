@@ -50,5 +50,7 @@ namespace SIEMCommon
 		[ServiceKnownType(typeof(ConductingEquipment))]
 		[ServiceKnownType(typeof(GeographicalRegion))]
 		void GetCEModel(NetworkModelTransfer model);
+		[OperationContract]
+		List<SIEMData> GetMalware();
 	}
 }

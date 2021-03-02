@@ -159,6 +159,30 @@
 					</Border>
 				</StatusBarItem>
 
+				<StatusBarItem>
+					<Border Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<Label Foreground="#FF0398E2" Content="|" TextBlock.FontWeight="Bold" />
+
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+
+				<StatusBarItem>
+					<Border Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<Label Foreground="#FF0398E2" Content="POSSIBLE MAN-IN-THE-MIDDLE ATTACK" TextBlock.FontWeight="Bold" />
+
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
+				<StatusBarItem>
+					<Border Background="Transparent"  Opacity="0.9">
+						<StackPanel Orientation="Horizontal">
+							<materialDesign:PackIcon Kind="Shield" Foreground="Red" Width="20" Height="20"/>
+						</StackPanel>
+					</Border>
+				</StatusBarItem>
 			</StatusBar>
 		</Grid>
 		<Grid Grid.Row="3">

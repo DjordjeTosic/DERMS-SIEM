@@ -2514,12 +2514,14 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\Innovative.G
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\Innovative.SolarCalculator.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\Modbus.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\ProcessingModule.dll
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\SIEMCommon.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\Polenter.SharpSerializer.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\FTN.Common.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\MaterialDesignColors.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\CalculationEngineServiceCommon.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\DERMSCommon.pdb
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\SIEMCommon.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\Common.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\ProcessingModule.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\Innovative.Geometry.Angle.xml
@@ -2542,5 +2544,3 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.pdb
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\SIEMCommon.dll
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\dCom\bin\Debug\SIEMCommon.pdb

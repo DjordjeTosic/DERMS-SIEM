@@ -73,13 +73,43 @@ namespace SIEMServices
 								string[] parts = line.Split(new[] { "  " }, StringSplitOptions.None);
 								DateTime dateTime = DateTime.Parse(parts[0]);
 								if (parts[1].Equals(" Unknown"))
-									LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 1));
+									LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 2));
 								else
-									LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 0));
+									LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 2));
 
 							}
 						}
 						pos = fs.Length;
+					}
+				}
+				return LogDataForUI;
+			}
+		}
+		public List<SIEMData> GetMalware()
+		{
+			string path = @"C:\Users\student\Desktop\DERMS-SIEM\DERMS\Loggs\MalwareHistory.txt";
+			List<SIEMData> LogDataForUI = new List<SIEMData>();
+			using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+			{
+
+				using (BufferedStream bs = new BufferedStream(fs))
+				{
+					using (StreamReader sr = new StreamReader(bs))
+					{
+						string line;
+
+							while ((line = sr.ReadLine()) != null)
+							{
+								string[] parts = line.Split(new[] { "  " }, StringSplitOptions.None);
+								DateTime dateTime = DateTime.Parse(parts[0]);
+								if (parts[3].Contains("DDoS"))
+									LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 1));
+								else
+									LogDataForUI.Add(new SIEMData(dateTime, parts[1], parts[2], parts[3], 2));
+
+							}
+						
+						//pos = fs.Length;
 					}
 				}
 				return LogDataForUI;

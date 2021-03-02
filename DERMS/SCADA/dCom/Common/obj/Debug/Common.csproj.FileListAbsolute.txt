@@ -502,7 +502,6 @@ C:\Users\Djole\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\bin\Debug\Common.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\bin\Debug\EasyModbus.dll
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb

@@ -4034,7 +4034,10 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\LoadingWindow.g.c
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\MainWindow.g.cs
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ManualCommandingWindow.g.cs
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NetworkModelUserControl.g.cs
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NMSUserControl.g.cs
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\OverViewUserControl.g.cs
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\PopUpWindow.g.cs
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ScadaUserControl.g.cs
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SIEMUserControl.g.cs
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SignalsSummaryUserControl.g.cs
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\App.g.cs
@@ -4049,7 +4052,10 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\LoadingWindow.bam
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\MainWindow.baml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ManualCommandingWindow.baml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NetworkModelUserControl.baml
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NMSUserControl.baml
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\OverViewUserControl.baml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\PopUpWindow.baml
+C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ScadaUserControl.baml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SIEMUserControl.baml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\SignalsSummaryUserControl.baml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.g.resources
@@ -4058,9 +4064,3 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.csproj.GenerateReso
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.exe
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\UI.pdb
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\OverViewUserControl.g.cs
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\OverViewUserControl.baml
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NMSUserControl.g.cs
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ScadaUserControl.g.cs
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\NMSUserControl.baml
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\UI\UI\obj\Debug\View\ScadaUserControl.baml

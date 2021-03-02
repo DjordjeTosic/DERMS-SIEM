@@ -980,7 +980,6 @@ C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\bin\Debug\MaterialDesignCo
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\bin\Debug\Polenter.SharpSerializer.xml
-C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\obj\Debug\DERMSCommon.csprojResolveAssemblyReference.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\obj\Debug\DERMSCommon.csproj.CoreCompileInputs.cache
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\obj\Debug\DERMSCommon.dll
 C:\Users\student\Desktop\DERMS-SIEM\DERMS\DERMSCommon\obj\Debug\DERMSCommon.pdb
